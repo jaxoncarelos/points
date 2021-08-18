@@ -4,7 +4,7 @@ import resolve from '@rollup/plugin-node-resolve';
 import livereload from 'rollup-plugin-livereload';
 import { terser } from 'rollup-plugin-terser';
 import css from 'rollup-plugin-css-only';
-
+import preprocess from 'svelte-preprocess'
 const production = !process.env.ROLLUP_WATCH;
 
 function serve() {
@@ -38,6 +38,7 @@ export default {
 	},
 	plugins: [
 		svelte({
+			preprocess: preprocess(),
 			compilerOptions: {
 				// enable run-time checks when not in production
 				dev: !production
