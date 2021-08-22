@@ -1,14 +1,9 @@
 <script>
 import Blogs from './comps/Blogs.svelte'
 import { fade } from 'svelte/transition';
-import { create_bidirectional_transition } from "svelte/internal";
 import Index from './comps/Index.svelte'
 	let isEntered = false;
 	let blogId = 0;
-	let blogPosts = [{
-		id: 1,
-		text: "",
-	}];
 	function Enter(){
 		isEntered = true;
 		
@@ -28,7 +23,7 @@ import Index from './comps/Index.svelte'
 
 <style>
 	html {
-		background: #333;
+		background: #111;
 	}
 	main {
 		font-family: Arial, Helvetica, sans-serif;
@@ -78,10 +73,15 @@ import Index from './comps/Index.svelte'
 		}
 	}
 	.btn {
-		background : #222;
+		background : #333;
 		color: white;
 		border-radius: 5px;
 		width: 500px;
-		text-shadow: 1.5px 1.5px rgba(0,255,255, 1), -1.5px -1.5px #fe2c54;;
+		text-shadow: 1.5px 1.5px rgba(0,255,255, 1), -1.5px -1.5px #fe2c54;
+		animation-name: glitchh2;
+		animation-duration: 0.25s;
+		animation-timing-function: linear;
+		animation-delay: 0s;
+		animation-iteration-count: infinite;
 	}
 </style>
